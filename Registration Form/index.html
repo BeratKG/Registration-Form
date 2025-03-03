@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/png" href="images/contact.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="light-mode">
+    <!-- Header (Üst Kısım) -->
+    <header>
+        <div class="header-content">
+            <h1 id="header-title">Kayıt Formu</h1>
+            <p id="header-description">Hoş geldiniz! Lütfen kayıt olmak için formu doldurun.</p>
+        </div>
+        
+        <button id="dark-mode-toggle">🌙</button>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main>
+        
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="language-switcher">
+                    <img src="images/Flag_of_Turkey.png" alt="Türkçe" class="flag" data-lang="tr">
+                    <img src="images/Flag_of_the_United_Kingdom.png" alt="English" class="flag" data-lang="en">
+                    <img src="images/Flag_of_Germany.png"C:\Users\Administrator\Desktop\html,\kayıt üçüncü deneme\images\Flag_of_Germany.png" alt="Deutsch" class="flag" data-lang="de">
+                    <img src="images/Flag_of_Spain.png" alt="Español" class="flag" data-lang="es">
+                </div>
+                <table>
+                    <!-- İsim -->
+                    <tr>
+                        <td><label for="firstName" id="label-firstName">İsim:</label></td>
+                        <td><input type="text" id="firstName" class="input-field" name="firstName" maxlength="20" placeholder="İsminizi giriniz" required></td>
+                    </tr>
+                    <!-- Soyisim -->
+                    <tr>
+                        <td><label for="lastName" id="label-lastName">Soyisim:</label></td>
+                        <td><input type="text" id="lastName" class="input-field" name="lastName" maxlength="20" placeholder="Soyisminizi giriniz" required></td>
+                    </tr>
+                    <!-- Doğum Tarihi -->
+                    <tr>
+                        <td><label for="birthdate" id="label-birthdate">Doğum Tarihi:</label></td>
+                        <td>
+                            <div class="date-fields">
+                                <select id="day" name="day" required disabled>
+                                    <option value="" disabled selected>Gün</option>
+                                </select>
+                                <select id="month" name="month" required disabled>
+                                    <option value="" disabled selected>Ay</option>
+                                </select>
+                                <select id="year" name="year" required disabled>
+                                    <option value="" disabled selected>Yıl</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- TC Kimlik No -->
+                    <tr>
+                        <td><label for="tc" id="label-tc">TC Kimlik No:</label></td>
+                        <td><input type="text" id="tc" name="tc" maxlength="11" class="input-field" placeholder="TC Kimlik No" required></td>
+                    </tr>
+                    <!-- Telefon Numarası -->
+                    <tr>
+                        <td><label for="phone" id="label-phone">Telefon Numarası:</label></td>
+                        <td>
+                            <div class="phone-container">
+                                <select id="countryCode" class="input-field">
+                                    <option value="+90">🇹🇷 +90 </option>
+                                <!--  <option value="+1">🇺🇸 +1 </option>
+                                    <option value="+44">🇬🇧 +44 </option>
+                                    <option value="+49">🇩🇪 +49 </option>
+                                    <option value="+34">🇪🇸 +34 </option>
+                                    <option value="+86">🇨🇳 +86 </option>
+                                    <option value="+81">🇯🇵 +81 </option>
+                                    <option value="+39">🇮🇹 +39 </option>
+                                    <option value="+33">🇫🇷 +33 </option>
+                                    <option value="+32">🇧🇪 +32 </option> --> 
+                                </select>
+                                <input type="text" id="phone" class="input-field" name="phone" maxlength="10" placeholder="5XX XXX XX XX" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- İl ve İlçe -->
+                    <tr>
+                        <td><label for="city" id="label-city">İl:</label></td>
+                        <td>
+                            <select id="city" class="input-field" name="city" required>
+                                <option value="" disabled selected>Seçiniz</option>
+                                <option value="istanbul">İstanbul</option>
+                                <option value="ankara">Ankara</option>
+                                <option value="izmir">İzmir</option>
+                                <option value="berlin">Berlin</option>
+                                <option value="madrid">Madrid</option>
+                                <option value="london">Londra</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="district" id="label-district">İlçe:</label></td>
+                        <td>
+                            <select id="district" name="district" class="input-field" required disabled>
+                                <option value="" disabled selected>İlçe seçiniz</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- Mail Adresi -->
+                    <tr>
+                        <td><label for="email" id="label-email">Mail Adresi:</label></td>
+                        <td><input type="email" id="email" name="email" class="input-field" placeholder="ornek@mail.com" required></td>
+                    </tr>
+                    <!-- Şifre -->
+                    <tr>
+                        <td><label for="password" id="label-password">Şifre:</label></td>
+                        <td>
+                            <div class="password-container">
+                                <input type="password" id="password" name="password" class="input-field" placeholder="Şifre" required>
+                                <span class="toggle-password" onclick="togglePassword('password')">🙈</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Şifre Tekrarı -->
+                    <tr>
+                        <td><label for="confirmPassword" id="label-confirmPassword">Şifre Tekrarı:</label></td>
+                        <td>
+                            <div class="password-container">
+                                <input type="password" id="confirmPassword" class="input-field" name="confirmPassword" placeholder="Şifre Tekrarı" required>
+                                <span class="toggle-password" onclick="togglePassword('confirmPassword')">🙈</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <p class="info" id="password-info">Şifre en az 8 karakter uzunluğunda olmalı ve en az bir büyük harf, bir küçük harf ve bir sayı içermelidir.</p>
+                <button type="submit" id="submit-button">Kayıt Ol</button>
+                <button type="button" onclick="resetForm()" id="reset-button">Temizle</button>
+            </form>
+            <p id="message" class="message"></p>
+        </div>
+    </main>
+
+    <!-- Footer (Bitiş Kısmı) -->
+    <footer>
+        <div class="footer-content">
+            <p id="footer-text">&copy; 2025 Kayıt Formu. Tüm hakları saklıdır. Made by BKG.</p>
+        </div>
+    </footer>
+</body>
+</html>
