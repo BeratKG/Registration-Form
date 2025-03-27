@@ -25,4 +25,4 @@ This project is a responsive and user-friendly registration form website built w
 DeepSeek-V3 was used for approximately 30% of this project. Special thanks to DeepSeek for their assistance in improving the project and providing valuable feedback.
 
 ## Website Link
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c0ddc643-1998-4379-bebb-363345973f45/deploy-status)](https://app.netlify.com/sites/berattest/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c0ddc643-1998-4379-bebb-363345973f45/deploy-status)](https://berattest.netlify.app/)
